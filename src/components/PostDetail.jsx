@@ -46,7 +46,7 @@ const PostDetail = ({ post }) => {
           </h4>
         );
       case 'image':
-        return <img key={index} alt={obj.title} height={obj.height} width={obj.width} src={obj.src} />;
+        return <Image key={index} alt={obj.title} height={obj.height} width={obj.width} src={obj.src} />;
       default:
         return modifiedText;
     }
@@ -65,12 +65,12 @@ const PostDetail = ({ post }) => {
       </div>
       <div className="px-4 lg:px-0">
         <div className="flex items-center mb-8 w-full">
-          <div className="hidden md:flex items-center justify-center lg:mb-0 lg:w-auto mr-8 items-center">
-            <img
+          <div className="hidden md:flex items-center justify-center lg:mb-0 lg:w-auto mr-8">
+            <Image
               alt={post.author.name}
-              height={30}
-              width={30}
-              className="align-middle rounded-full"
+              height={50}
+              width={50}
+              className="align-middle rounded-[50%] h-[50px]"
               src={post.author.photo.url}
             />
             <p className="inline align-middle ml-2 font-medium text-lg">{post.author.name}</p>

@@ -1,6 +1,5 @@
 import React from 'react';
 import Image from 'next/image';
-
 import { grpahCMSImageLoader } from '../../util';
 
 const Author = ({ author }) => (

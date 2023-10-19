@@ -29,9 +29,9 @@ const Header = () => {
         <div className="text-center pb-6">
           <Link href="/">
             <span
-              className={`mx-3 font-semibold ${
-                routerNav.asPath === '/' ? 'dark:text-white text-black' : ''
-              } transition-colors duration-300 hover:text-foreground/80 text-foreground/60`}
+              className={`mx-3 font-semibold transition-colors duration-300 hover:text-foreground/80 text-foreground/60${
+                routerNav.asPath === '/' ? 'text-black dark:text-white' : ''
+              }`}
             >
               Trang chủ
             </span>
@@ -39,9 +39,9 @@ const Header = () => {
           {categories.map((category, index) => (
             <Link key={index} href={`/category/${category.slug}`}>
               <span
-                className={`mx-3 font-semibold p-1 inline-block ${
-                  routerNav.asPath === `/category/${category.slug}` ? 'dark:text-white text-black' : ''
-                } transition-colors duration-300 hover:text-foreground/80 text-foreground/60`}
+                className={`mx-3 font-semibold p-1 inline-block transition-colors duration-300 hover:text-foreground/80 text-foreground/60${
+                  routerNav.asPath === `/category/${category.slug}` ? 'text-black dark:text-white' : ''
+                } `}
               >
                 {category.name}
               </span>

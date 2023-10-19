@@ -1,16 +1,7 @@
 import React from 'react';
 import { useRouter } from 'next/router';
 
-import {
-  PostDetail,
-  Categories,
-  PostWidget,
-  Author,
-  Comments,
-  CommentsForm,
-  Loader,
-  PageMetadata,
-} from '../../components';
+import { PostDetail, Comments, CommentsForm, Loader, PageMetadata } from '../../components';
 import { getPosts, getPostDetails } from '@/services';
 import { AdjacentPosts } from '@/sections';
 
@@ -27,7 +18,6 @@ const PostDetails = ({ post }) => {
       <div className="container px-10 mb-8">
         <div className="flex flex-col w-12/12 mx-auto lg:w-9/12">
           <PostDetail post={post} />
-          <Author author={post.author} />
           <AdjacentPosts slug={post.slug} createdAt={post.createdAt} />
           <CommentsForm slug={post.slug} />
           <Comments slug={post.slug} />

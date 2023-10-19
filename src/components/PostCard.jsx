@@ -9,16 +9,16 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 const PostCard = ({ post }) => (
   <Card className="my-4">
     <CardHeader>
-      <Image
-        src={post.featuredImage.url}
-        alt={post.title}
-        width={1200}
-        height={630}
-        className="object-top w-full object-cover  shadow-lg rounded-t-lg lg:rounded-lg"
-      />
-      <CardTitle className="text-xl">
-        <Link href={`/post/${post.slug}`}>{post.title}</Link>
-      </CardTitle>
+      <Link href={`/post/${post.slug}`}>
+        <Image
+          src={post.featuredImage.url}
+          alt={post.title}
+          width={1200}
+          height={630}
+          className="object-top w-full object-cover  shadow-lg rounded-t-lg lg:rounded-lg"
+        />
+        <CardTitle className="text-xl mt-4">{post.title}</CardTitle>
+      </Link>
     </CardHeader>
     <CardContent>
       <div className="flex items-center space-x-4">
@@ -27,7 +27,7 @@ const PostCard = ({ post }) => (
           <AvatarFallback>{post.author.name}</AvatarFallback>
         </Avatar>
         <div>
-          <p className="text-sm font-medium leading-none">{post.author.name}</p>
+          <p className="text-sm font-semibold leading-none">{post.author.name}</p>
           <p className="text-sm text-muted-foreground mt-1">
             <svg
               xmlns="http://www.w3.org/2000/svg"
