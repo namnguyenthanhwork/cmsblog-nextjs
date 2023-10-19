@@ -17,7 +17,7 @@ export default function PageMetadata({
       <title key="title">{`${title} | ${siteName}`}</title>
       <meta name="description" content={description} />
       <meta key="og_type" property="og:type" content={ogType} />
-      <meta key="og_title" property="og:title" content={title} />
+      <meta key="og_title" property="og:title" content={`${title} | ${siteName}`} />
       <meta key="og_description" property="og:description" content={description} />
       <meta key="og_locale" property="og:locale" content="en_IE" />
       <meta key="og_site_name" property="og:site_name" content={siteName} />
@@ -27,7 +27,7 @@ export default function PageMetadata({
       <meta key="og_image:alt" property="og:image:alt" content={`${title} | ${siteName}`} />
       <meta name="robots" content="index,follow" />
       <meta key="twitter:card" name="twitter:card" content="summary_large_image" />
-      <meta key="twitter:title" property="twitter:title" content={title} />
+      <meta key="twitter:title" property="twitter:title" content={`${title} | ${siteName}`} />
       <meta key="twitter:description" property="twitter:description" content={description} />
       <link rel="canonical" href={canonical ?? DOMAIN} />
       <link rel="icon" href="/favicon.png" type="image/x-icon" sizes="96x96" />
